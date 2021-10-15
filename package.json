@@ -1,0 +1,19 @@
+{
+  "name": "protokol-nft",
+  "version": "1.0.0",
+  "description": "A decentralized Application for Non Fungible Tokens",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/george-shammar/Protokol-NFT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/george-shammar/Protokol-NFT/issues"
+  },
+  "homepage": "https://github.com/george-shammar/Protokol-NFT#readme"
+}
