@@ -30,7 +30,6 @@ contract Protokol is ERC721, Pausable, Ownable {
     function _setTokenURI(uint256 tokenId, string memory _tokenURI) internal {
         _tokenURIs[tokenId] = _tokenURI;
     }
-
     
     /**
     @notice onlyOwner is not enforced so as to allow anyone call this function.
@@ -51,7 +50,6 @@ contract Protokol is ERC721, Pausable, Ownable {
              _tokenIds.increment();
         }
        
-        
         // _setTokenURI(newId, uri);
        
     }
@@ -69,7 +67,5 @@ contract Protokol is ERC721, Pausable, Ownable {
     function unpause() public onlyOwner {
         _unpause();
     }
-
-
 
 }
