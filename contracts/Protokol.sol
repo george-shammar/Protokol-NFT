@@ -29,7 +29,8 @@ contract Protokol is ERC721, Pausable, Ownable {
 
     function mint(address recipient, string memory uri uint256 _mintAmount) public {
         uint supply = totalSupply();
-        require(_mintAmount > 0, "Minimum number of mintable token is 1")
+        require(_mintAmount > 0, "Minimum number of mintable token is 1");
+        require(_mintAmount <= maxMintAmount, "Maximum amount mintable at once is 10")
         
         uint256 newId = _tokenIds.current();
         _mint(recipient, newId);
