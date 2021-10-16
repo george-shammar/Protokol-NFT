@@ -20,7 +20,7 @@ contract Protokol is ERC721, Pausable, Ownable {
 
     /// @dev Sets maximum number of mintable tokens at once.
     uint256 public maxMintAmount = 10;
-    
+
     mapping(uint256 => string) _tokenURIs;
 
     constructor()ERC721("Protokol", "PTK"){
@@ -31,7 +31,7 @@ contract Protokol is ERC721, Pausable, Ownable {
         _tokenURIs[tokenId] = _tokenURI;
     }
 
-    // onlyOwner was enforced on the mint function because I want anyone to be able to mint directly from the DApp.
+    /// @notice onlyOwner is not enforced so as to allow anyone call this function.
 
     function mint(address recipient, string memory uri uint256 _mintAmount) public {
         uint supply = totalSupply();
