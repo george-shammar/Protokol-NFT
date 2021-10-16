@@ -36,6 +36,14 @@ contract Protokol is ERC721, Pausable, Ownable {
         return _tokenURI;
     }
 
+    function pause() public onlyOwner {
+        _pause();
+    }
+
+    function unpause() public onlyOwner {
+        _unpause();
+    }
+
 
 
 }
