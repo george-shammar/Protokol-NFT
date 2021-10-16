@@ -14,6 +14,10 @@ contract Protokol is ERC721, Pausable, Ownable {
 
     }
 
+    function mint(address recipient, string memory uri) public {
+        
+    }
+
 
 
 }
