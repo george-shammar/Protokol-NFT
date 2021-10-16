@@ -27,7 +27,8 @@ contract Protokol is ERC721, Pausable, Ownable {
     // onlyOwner was enforced on the mint function because I want anyone to be able to mint directly from the DApp.
 
     function mint(address recipient, string memory uri uint256 _mintAmount) public {
-        require supply = totalSupply();
+        uint supply = totalSupply();
+        require(_mintAmount > 0, "Minimum number of mintable token is 1")
         
         uint256 newId = _tokenIds.current();
         _mint(recipient, newId);
