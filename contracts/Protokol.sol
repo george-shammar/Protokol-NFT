@@ -23,7 +23,9 @@ contract Protokol is ERC721, Pausable, Ownable {
         _tokenURIs[tokenId] = _tokenURI;
     }
 
-    function mint(address recipient, string memory uri) public onlyOwner {
+    // onlyOwner was enforced on the mint function because I want anyone to be able to mint directly from the DApp.
+
+    function mint(address recipient, string memory uri) public {
         uint256 newId = _tokenIds.current();
         _mint(recipient, newId);
         _setTokenURI(newId, uri);
