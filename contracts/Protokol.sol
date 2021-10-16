@@ -7,6 +7,13 @@ import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol"
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract Protokol {
+contract Protokol is ERC721, Pausable, Ownable {
+    
+
+    constructor()ERC721("Protokol", "PTK"){
+
+    }
+
+
 
 }
