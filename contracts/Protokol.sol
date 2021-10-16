@@ -14,6 +14,7 @@ contract Protokol is ERC721, Pausable, Ownable {
     using Strings for uint256;
     Counters.Counter private _tokenIds;
     uint256 public constant MAX_TOKEN = 1000;
+    uint256 public maxMintAmount = 10;
     mapping(uint256 => string) _tokenURIs;
 
     constructor()ERC721("Protokol", "PTK"){
