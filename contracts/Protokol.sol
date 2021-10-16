@@ -31,7 +31,13 @@ contract Protokol is ERC721, Pausable, Ownable {
         _tokenURIs[tokenId] = _tokenURI;
     }
 
-    /// @notice onlyOwner is not enforced so as to allow anyone call this function.
+    
+    /**
+    @notice onlyOwner is not enforced so as to allow anyone call this function.
+    @dev Requires minimum number of mintable token to be at least 1.
+    Requires number to be minted to be below maximum mintable as once.
+    Requires total supply not to exceed MAX_TOKEN.
+    */
 
     function mint(address recipient, string memory uri uint256 _mintAmount) public {
         uint supply = totalSupply();
