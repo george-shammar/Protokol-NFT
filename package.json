@@ -24,6 +24,7 @@
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.4.7",
     "hardhat": "^2.6.6",
-    "ipfs-http-client": "^50.1.2"
+    "ipfs-http-client": "^50.1.2",
+    "web3modal": "^1.9.4"
   }
 }
