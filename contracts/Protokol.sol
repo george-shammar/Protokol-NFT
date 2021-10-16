@@ -12,7 +12,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 /// @title A basic ERC721 smart contract that allows user to mint multiple tokens at once.  
 /// @dev Inherits standard Openzeppelin's library.
 
-contract Protokol is ERC721, Pausable, Ownable {
+contract Protokol is ERC721, Pausable, Ownable, ERC721URIStorage {
     
     using Counters for Counters.Counter;
     using Strings for uint256;
