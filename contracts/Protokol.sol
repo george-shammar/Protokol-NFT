@@ -30,8 +30,9 @@ contract Protokol is ERC721, Pausable, Ownable {
         _tokenIds.increment();
     }
 
-    function tokenURI() public view override returns(string memory) {
-        
+    function tokenURI(uint256 tokenId) public view override returns(string memory) {
+        string memory _tokenURI = _tokenURIs[tokenId];
+        return _tokenURI;
     }
 
 
