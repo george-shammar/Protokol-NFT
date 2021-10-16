@@ -31,6 +31,7 @@ contract Protokol is ERC721, Pausable, Ownable {
     }
 
     function tokenURI(uint256 tokenId) public view override returns(string memory) {
+        require(_exists(tokenId), "Token not exist");
         string memory _tokenURI = _tokenURIs[tokenId];
         return _tokenURI;
     }
