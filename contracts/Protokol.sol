@@ -19,13 +19,14 @@ contract Protokol is ERC721, Pausable, Ownable {
 
     }
 
-    function setTokenURI(uint256 tokenId, string memory _tokenURI) internal {
+    function _setTokenURI(uint256 tokenId, string memory _tokenURI) internal {
         _tokenURIs[tokenId] = _tokenURI;
     }
 
-    function mint(address recipient, string memory uri) public {
+    function mint(address recipient, string memory uri) public onlyOwner {
         uint256 newId = _tokenIds.current();
         _mint(recipient, newId);
+        _setTokenURI(newId, uri);
         _tokenIds.increment();
     }
 
