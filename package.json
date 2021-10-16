@@ -18,6 +18,7 @@
   "homepage": "https://github.com/george-shammar/Protokol-NFT#readme",
   "dependencies": {
     "@openzeppelin/contracts": "^4.3.2",
-    "chai": "^4.3.4"
+    "chai": "^4.3.4",
+    "ipfs-http-client": "^50.1.2"
   }
 }
