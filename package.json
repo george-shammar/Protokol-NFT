@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/george-shammar/Protokol-NFT/issues"
   },
-  "homepage": "https://github.com/george-shammar/Protokol-NFT#readme"
+  "homepage": "https://github.com/george-shammar/Protokol-NFT#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.2"
+  }
 }
