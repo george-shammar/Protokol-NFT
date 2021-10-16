@@ -18,7 +18,8 @@ contract Protokol is ERC721, Pausable, Ownable {
     }
 
     function mint(address recipient, string memory uri) public {
-        
+        uint256 newId = _tokenIds.current();
+        _tokenIds.increment();
     }
 
 
