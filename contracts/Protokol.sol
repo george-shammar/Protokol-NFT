@@ -11,14 +11,16 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 /// @title A basic ERC721 smart contract that allows user to mint multiple tokens at once.  
 /// @dev Inherits standard Openzeppelin's library.
 
-
 contract Protokol is ERC721, Pausable, Ownable {
     
     using Counters for Counters.Counter;
     using Strings for uint256;
     Counters.Counter private _tokenIds;
     uint256 public constant MAX_TOKEN = 1000;
+
+    /// @dev Sets maximum number of mintable tokens at once.
     uint256 public maxMintAmount = 10;
+    
     mapping(uint256 => string) _tokenURIs;
 
     constructor()ERC721("Protokol", "PTK"){
