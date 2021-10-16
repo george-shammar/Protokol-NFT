@@ -8,9 +8,9 @@ import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-/** 
-@title A basic ERC721 smart contract that allows user to mint multiple tokens at once.  
-*/
+/// @title A basic ERC721 smart contract that allows user to mint multiple tokens at once.  
+/// @dev Inherits standard Openzeppelin's library.
+
 
 contract Protokol is ERC721, Pausable, Ownable {
     
