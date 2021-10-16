@@ -1,4 +1,5 @@
 //SPDX-License-Identifier: Unlicense
+
 pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
@@ -12,7 +13,7 @@ contract Protokol is ERC721, Pausable, Ownable {
     using Counters for Counters.Counter;
     using Strings for uint256;
     Counters.Counter private _tokenIds;
-    uint256 public constant TOTAL_SUPPLY = 1000;
+    uint256 public constant MAX_TOKEN = 1000;
     mapping(uint256 => string) _tokenURIs;
 
     constructor()ERC721("Protokol", "PTK"){
@@ -25,7 +26,9 @@ contract Protokol is ERC721, Pausable, Ownable {
 
     // onlyOwner was enforced on the mint function because I want anyone to be able to mint directly from the DApp.
 
-    function mint(address recipient, string memory uri) public {
+    function mint(address recipient, string memory uri uint256 _mintAmount) public {
+        require supply = totalSupply();
+        
         uint256 newId = _tokenIds.current();
         _mint(recipient, newId);
         _setTokenURI(newId, uri);
