@@ -11,11 +11,15 @@ contract Protokol is ERC721, Pausable, Ownable {
     
     using Counters for Counters.Counter;
     using Strings for uint256;
-    Counters.Counter _tokenIds;
+    Counters.Counter private _tokenIds;
+    uint256 public constant TOTAL_SUPPLY = 1000;
+    mapping(uint256 => string) _tokenURIs;
 
     constructor()ERC721("Protokol", "PTK"){
 
     }
+
+    function setToke
 
     function mint(address recipient, string memory uri) public {
         uint256 newId = _tokenIds.current();
