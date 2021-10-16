@@ -47,9 +47,7 @@ contract Protokol is ERC721, Pausable, Ownable, ERC721URIStorage {
             _safeMint(recipient, newId);
             _setTokenURI(newId, uri);
             _tokenIds.increment();
-        }
-       
-       
+        } 
     }
 
     function tokenURI(uint256 tokenId) public view override returns(string memory) {
