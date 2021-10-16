@@ -35,7 +35,7 @@ contract Protokol is ERC721, Pausable, Ownable {
         
         for (uint256 i; i <= _mintAmount; i++) {
             uint256 newId = _tokenIds.current();
-            _mint(recipient, newId);
+            _safeMint(recipient, newId);
              _tokenIds.increment();
         }
        
