@@ -1,7 +1,7 @@
 
 
 async function main() {
-  
+  console.log("pending");
 }
 
 main().catch((error) => {
