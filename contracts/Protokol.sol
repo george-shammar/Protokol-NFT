@@ -39,7 +39,7 @@ contract Protokol is ERC721, Pausable, Ownable, ERC721URIStorage {
         uint supply = totalSupply();
         require(_mintAmount > 0, "Minimum number of mintable token is 1");
         require(_mintAmount <= maxMintAmount, "Maximum amount mintable at once is 10");
-        require(supply + _mintAmount <= MAX_TOKEN, "Total number of tokens exceeded");
+        // require(supply + _mintAmount <= MAX_TOKEN, "Total number of tokens exceeded");
         
         for (uint256 i; i <= _mintAmount; i++) {
             uint256 newId = _tokenIds.current();
